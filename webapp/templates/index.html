@@ -1,0 +1,61 @@
+
+{% include 'header.html' %}
+
+<body>
+
+{% include 'nav.html' %}
+
+  <div class="container-fluid">
+    <div class="row">
+      {% include 'sidebar.html' %}  
+
+
+
+
+
+
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h1 class="page-header">Dashboard</h1>
+      </div >
+
+      <div style="display: inline-flex; margin-left: 300px; ">
+        <form class="form-signin" action="/test" method="post">    
+          <button id="mybutton" class="pos" >   + Add </button>
+        </form>
+
+        <form class="form-signin" action="/newpage" method="post">    
+          <button id="mybutton" class="pos" >Import</button>
+        </form>
+
+        <form class="form-signin" action="/export" method="post">    
+          <button id="mybutton" class="pos" >Export</button>
+        </form>
+
+
+        <form class="form-signin" action="/updatevalue" method="post">    
+          <button id="mybutton" class="pos" >Update</button>
+        </form>
+
+    
+
+      </div>
+      {{import_status}}
+      {{export_status}}
+
+      <div>
+        <br>
+        <br>
+
+      {{dataSent | safe}}
+
+
+
+      
+    </div>
+
+    <a style="display: inline-flex; margin-left: 300px; " href="{{ url_for('paginationbackward') }}"> &larr;Previous</a>
+    <a style="margin-left:400px;" href="{{ url_for('paginationForward') }}">Next &rarr;</a>
+    </div>
+  </div>
+
+{% include 'footer.html' %}

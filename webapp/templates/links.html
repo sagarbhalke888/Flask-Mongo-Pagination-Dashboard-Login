@@ -1,0 +1,9 @@
+    <li {%- if request.path == "/home" %} class="active"{% endif %}><a href="{{ url_for('home', page = '1') }}">Gen Qualitative </a></li>
+    <br>
+    <li {%- if request.path == "/home" %} class="active"{% endif %}><a href="{{ url_for('home', page = '1') }}">Quantitive</a></li>
+    <br>
+    <li {%- if request.path == "/home" %} class="active"{% endif %}><a href="{{ url_for('home', page = '1') }}">Forensic</a></li>
+
+
+    <br>
+    <li {%- if request.path == "/home" %} class="active"{% endif %}><a href="{{ url_for('uploadfunctionality') }}">Upload</a></li>

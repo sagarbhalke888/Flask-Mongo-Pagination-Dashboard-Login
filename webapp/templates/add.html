@@ -1,0 +1,79 @@
+
+{% include 'header.html' %}
+
+<body>
+
+{% include 'nav.html' %}
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h1 class="page-header">New Quantitative Parameter</h1>
+      </div>
+
+      <div>
+    
+        <form class="form-signin" action="/addData" method="post">
+      
+            <input type="text" name="Parameter" id="Parameter" class="form-control" placeholder="Parameter" required autofocus>
+            
+            <br>
+            <p for="Source">Source</p>
+            <select name="Source" id="Source">
+              <option value="bse">BSE</option>
+              <option value="nse">NSE</option>
+            </select>
+            <br>         
+            <br> 
+            <p for="Impact">Impact</p>
+
+            <input type="radio" name="options1" id="option12" value="positive"> <label for="Impact">Positive</label> </input><br>
+            <input type="radio" name="options1" id="option22" value="negative"> <label for="Impact">Negative</label> </input><br>
+
+
+            <br>
+            <p for="Data_type">Data Type:</p>
+
+
+
+            <select name="Data_type" id="Data_type">
+              <option value="Number">Number</option>
+              <option value="Amount">Amount</option>
+              <option value="Data">Date</option>
+
+            </select>
+
+            <br>
+            <br>
+            
+            <p for="type">Type:</p>
+            <input type="radio" name="type" id="type1" value="Direct"> Direct </input><br>
+            <input type="radio" name="type" id="type2" value="Derived"> Derived </input><br>
+            <br>
+
+            <p for="Weightage">Weightage:</p>
+            <input type="text" name="Weightage" id="weightage" class="form-control" placeholder="weightage"  autofocus>            
+            <br>
+            <p for="Mapping_Field">Mapping Field:</p>
+
+            <input type="text" name="Mapping_Field" id="Mapping_Field" class="form-control" placeholder="Mapping_Field" required autofocus>
+      
+
+
+        
+            <br>
+
+
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+          </form>
+    
+          
+      </div>
+      
+
+    </div>
+  </div>
+
+{% include 'footer.html' %}

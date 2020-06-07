@@ -1,0 +1,32 @@
+
+{% include 'header.html' %}
+
+<body>
+
+{% include 'nav.html' %}
+
+  <div class="container-fluid">
+    <div class="row">
+
+      {% include 'sidebar.html' %}  
+ <div class="login">
+   <br>
+   <br>
+
+    <form id =unique class='center' action="{{ url_for('import_data')}}"method="post" enctype="multipart/form-data">
+      <input type="file" name="file" required="required" />
+      <br>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Sumbit</button>
+    </form>
+
+   <br>
+   <br>
+
+
+ </div>
+
+
+</div>
+</div>
+
+{% include 'footer.html' %}
